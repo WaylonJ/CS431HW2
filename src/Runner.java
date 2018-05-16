@@ -22,15 +22,20 @@ public class Runner {
 		fcfs.work();
 		fcfs.printValues();
 		
-		System.out.println();
+		System.out.println("SSF:");
 		SSF ssf = new SSF(master, entries);
 		ssf.work();
 		ssf.printValues();
 		
-		System.out.println();
+		System.out.println("Elevator");
 		Elevator elevator = new Elevator(master, entries);
 		elevator.work();
 		elevator.printValues();
+		
+		System.out.println("Custom");
+		Custom custom = new Custom(master, entries);
+		custom.work();
+		custom.printValues();
 	}
 	
 	public static void generateList(ArrayList<SeqReq> master, int entries) {
